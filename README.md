@@ -2,7 +2,7 @@
 
 * By: Jake Edgar
 
-![Diagram](./public/Ticket-Diagram.png)
+![Diagram](./src/TicketUpdated.png)
 
 ## SETUP AND INSTALLATION
 

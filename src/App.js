@@ -2,14 +2,15 @@ import React from "react";
 import Header from "./components/Header";
 import './App.css'
 import TicketList from "./components/TicketList";
+import TicketControl from "./components/TicketControl";
 
 function App(){
   return ( 
-    <div id="App">
+    <div className="App">
       <React.Fragment>
-        <header id="App-header">
+        <header className="App-header">
           <Header />
-          <TicketList />
+          <TicketControl />
         </header>
       </React.Fragment>
     </div>
