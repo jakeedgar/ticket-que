@@ -1,29 +1,18 @@
 import React from "react";
 import { v4 } from 'uuid';
 import PropTypes from "prop-types";
-import { faker } from '@faker-js/faker';
 
 function NewTicketForm(props){
 
-
-  const firstName = faker.name.firstName();
-  const firstName2 = faker.name.firstName();
-  const noun = faker.hacker.noun()
-  const ingVerb = faker.hacker.ingverb()
-  const address = faker.address.secondaryAddress()
-  const phrase = faker.hacker.phrase()
-  
   function handleNewTicketFormSubmission(event) {
   event.preventDefault();
-  console.log(firstName);
-  props.onNewTicketCreation({names: firstName + " and " + firstName2, location: address, issue: ingVerb + ' ' + noun + ' ' + phrase, id: v4()});
+  props.onNewTicketCreation({names: event.target.names.value, location: event.target.location.value, issue: event.target.issue.value, id: v4()});
   }
-
 
   return (
     <React.Fragment>
       <form onSubmit={handleNewTicketFormSubmission}>
-        {/* <textarea 
+        <textarea 
           className='input-text'
           type='text'
           name='names'
@@ -36,7 +25,7 @@ function NewTicketForm(props){
         <textarea
           className='input-text'
           name='issue'
-          placeholder='Describe your issue.' /> */}
+          placeholder='Describe your issue.' />
         <button className='submit-ticket-button' type='submit'>Submit</button>
       </form>
     </React.Fragment>
