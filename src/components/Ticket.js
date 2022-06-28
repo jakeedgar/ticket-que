@@ -6,7 +6,7 @@ function Ticket(props){
     <React.Fragment>
       <h3>{props.location} - {props.names}</h3>
       <p><em>{props.issue}</em></p>
-      <hr/>
+      <hr className='line'/>
     </React.Fragment>
   );
 }

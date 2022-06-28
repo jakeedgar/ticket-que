@@ -35,3 +35,34 @@
 .header-text {
   color: beige;
 }
+
+.ticket-button, .submit-ticket-button {
+  margin: 1rem;
+  padding: .5rem;
+  border-radius: .75em;
+  box-shadow: 2px 2px #642525e6;
+  align-items: center;
+}
+
+.submit-ticket-button {
+  align-items: center;
+  position: relative;
+  bottom: 1.05rem;
+}
+
+.ticket-button:hover, .submit-ticket-button:hover {
+  background-color: rgb(185, 174, 153);
+  cursor: pointer;
+}
+
+hr.line {
+  display: flex;
+  width:80%;
+  text-align: center;
+}
+
+.input-text {
+  margin: .3em;
+  text-align: center;
+  align-items: center;
+}
