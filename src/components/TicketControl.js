@@ -8,7 +8,7 @@ class TicketControl extends React.Component {
     super(props);
     this.state = {
       formVisibleOnPage: false,
-      mainTicketList: [] // new code
+      mainTicketList: [] 
     };
   }
 
@@ -26,9 +26,17 @@ handleAddingNewTicketToList = (newTicket) => {
     });
   }
 
+handleAddingNewRandomTicketToList = (newTicket) => {
+    const newMainTicketList = this.state.mainTicketList.concat(newTicket);
+    this.setState({
+      mainTicketList: newMainTicketList,
+      formVisibleOnPage: false
+    });
+  }
+
   render(){
     let currentlyVisibleState = null;
-    let buttonText = null;
+    let buttonText = 'Test';
     if (this.state.formVisibleOnPage) {
       currentlyVisibleState = <NewTicketForm onNewTicketCreation={this.handleAddingNewTicketToList} />
       buttonText = "Return to Ticket List";

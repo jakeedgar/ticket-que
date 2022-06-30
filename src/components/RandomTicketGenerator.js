@@ -7,7 +7,7 @@ function RandomTicketGenerator(props) {
 
   function handleRandomTicketFormSubmission(event) {
   event.preventDefault();
-  props.onNewTicketCreation({names: firstName + firstName2, location: address, issue: phrase, id: v4()});
+  props.onRandomTicketCreation({names: firstName + firstName2, location: address, issue: phrase, id: v4()});
   }
 
     return (

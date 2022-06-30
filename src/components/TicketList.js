@@ -2,12 +2,11 @@ import React from "react";
 import Ticket from "./Ticket";
 import PropTypes from "prop-types";
 
-// remove const mainTicketList = [ ... ]. We no longer want these.
 
-function TicketList(props) { // Add props as parameter.
+function TicketList(props) {
   return (
     <React.Fragment>
-      {props.ticketList.map((ticket, index) => // Loop through the list passed down from TicketControl.
+      {props.ticketList.map((ticket, index) => 
         <Ticket names={ticket.names}
           location={ticket.location}
           issue={ticket.issue}
