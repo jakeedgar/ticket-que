@@ -37,6 +37,7 @@
 }
 
 .ticket-button, .submit-ticket-button {
+  width: auto;
   margin: 1rem;
   padding: .5rem;
   border-radius: .75em;
@@ -59,6 +60,10 @@ hr.line {
   display: flex;
   width:80%;
   text-align: center;
+}
+
+hr.line-small {
+  width: 50%
 }
 
 .input-text {
